@@ -1,0 +1,38 @@
+'use client'
+import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+
+const Carousel = ({ images, interval = 3000, ctaText, onCtaClick }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, [images.length, interval]);
+
+  return (
+    <div className="relative w-full h-screen overflow-hidden">
+      <img
+        src={images[currentIndex]}
+        alt="carousel"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-50">
+        <h2 className="text-4xl font-bold mb-4">Welcome to Our Site!</h2>
+        {ctaText && (
+          <button
+            onClick={onCtaClick}
+            className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow-lg hover:bg-red-900 transition-colors duration-300"
+          >
+            {ctaText}
+          </button>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Carousel;
