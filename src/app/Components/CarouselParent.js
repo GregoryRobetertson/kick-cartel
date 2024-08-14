@@ -15,7 +15,7 @@ const images = [
       <Carousel
         images={images}
         interval={5000}
-        ctaText="Learn More"
+        ctaText="Shop"
         />
     </div>
   );

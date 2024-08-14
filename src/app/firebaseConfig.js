@@ -1,19 +1,17 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getFirestore} from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAeJTvlnWvDLUwF7d_n96P3eJQ8Hy8LQCk",
-  authDomain: "kick-cartel.firebaseapp.com",
-  projectId: "kick-cartel",
-  storageBucket: "kick-cartel.appspot.com",
-  messagingSenderId: "94790528554",
-  appId: "1:94790528554:web:0b9e1dbab14ac51ba71d53"
+  apiKey: "AIzaSyB5bXtfjmOSWPupW0BgChzR2i1nmBSLxK4",
+  authDomain: "kick-cartel-28bf3.firebaseapp.com",
+  projectId: "kick-cartel-28bf3",
+  storageBucket: "kick-cartel-28bf3.appspot.com",
+  messagingSenderId: "304402302894",
+  appId: "1:304402302894:web:2bad14b8ab5f274f8a2a3f"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
