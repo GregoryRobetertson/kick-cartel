@@ -1,6 +1,6 @@
-
+import { CartProvider } from "./Cart";
 import "./globals.css";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 export const metadata = {
   title: "Kick Cartel",
   description: "We sell name branded sneakers",
@@ -9,11 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-   
-         <body>{children}</body>
-     
-     
-
+      <CartProvider>
+        <body>{children}</body>
+      </CartProvider>
     </html>
   );
 }

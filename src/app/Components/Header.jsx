@@ -44,7 +44,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="" className="text-white underline-offset-4 hover:no-underline">
+              <Link href="#shop" className="text-white underline-offset-4 hover:no-underline">
                 Shop
               </Link>
             </li>

@@ -25,7 +25,7 @@ const Carousel = ({ images, interval = 3000, ctaText, onCtaClick }) => {
         {ctaText && (
           <button
             onClick={onCtaClick}
-            className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow-lg hover:bg-red-900 transition-colors duration-300"
+            className="px-6 py-3 bg-red-700 text-white font-semibold rounded-lg shadow-lg  hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
           >
             {ctaText}
           </button>
