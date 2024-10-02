@@ -1,3 +1,27 @@
+# Kick-Kartel
+
+## Overview
+
+This project is a sneaker e-commerce website designed to provide users with an intuitive and engaging shopping experience. The platform allows sneaker enthusiasts to browse, select, and purchase their favorite sneakers seamlessly.
+
+## Technologies Used
+
+- **React**: A JavaScript library for building dynamic and responsive user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework that enables rapid UI development with custom designs.
+- **Bootstrap**: A popular front-end framework providing responsive layout components and pre-designed styles.
+- **Shopping Cart Functionality**: Implemented using resources from the developer community to facilitate an efficient shopping experience.
+
+## Features
+
+- User-friendly interface for easy navigation.
+- Responsive design that adapts to various devices.
+- Comprehensive shopping cart functionality for managing selections.
+
+## Purpose
+
+The purpose of this project is to create a reliable online platform that meets the needs of sneaker lovers, offering them a comprehensive selection of products along with an enjoyable shopping experience.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
