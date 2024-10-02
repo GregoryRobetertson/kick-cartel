@@ -1,43 +1,52 @@
+import axios from "axios";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-
 
 export default function Products() {
     const [products, setProducts] = useState([]);
 
-    async function getProducts() {
-        const response = await fetch('https://kick-cartel-backend.onrender.com/product')  // fetch the products
-        const data = await response.json() // convert the response to json
-        setProducts(data.products) // set the products in the state to the products we fetched
-      }
-
-      useEffect(() => {
-        getProducts()
-      }, [])
+    useEffect(() => {
+        async function wakeupServer() {
+            try {
+                const response = await axios.get('https://kick-cartel-backend.onrender.com/product');
+                setProducts(response.data);
+            } catch (error) {
+                console.error('Error fetching products:', error);
+            }
+        }
+        wakeupServer();
+    }, []);
 
     return (
-      <>
-      <div className='flex flex-col justify-center bg-gray-100'>
-  <div className='flex justify-between items-center px-20 py-5'>
-    <h1 className='text-2xl uppercase font-bold mt-10 text-center mb-10'>Shop</h1>
-  </div>
-  <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-10'>
-    {
-      products.map(product => (
-        <div key={product.name} className='bg-white shadow-md rounded-lg px-10 py-10'>
-          <img src={product.imageUrl} alt={product.name} className='rounded-md h-48' />
-          <div className='mt-4'>
-            <h1 className='text-lg uppercase font-bold'>{product.name}</h1>
-            <p className='mt-2 text-gray-600 text-sm'>{product.description.slice(0, 40)}...</p>
-            <p className='mt-2 text-gray-600'>${product.price}</p>
-          </div>
-          <div className='mt-6 flex justify-between items-center'>
-            <button className='px-4 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700'>Add to cart</button>
-          </div>
+        <div className='bg-black min-h-screen flex flex-col'>
+            <header className='flex justify-between items-center p-3  bg-black'>
+                <h1 className='text-3xl font-bold text-white uppercase'>Shop</h1>
+            </header>
+            <main className='flex-grow p-10 bg-gray-100'>
+                <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+                    {products.map(product => (
+                        <div key={product.id} className='bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105'>
+                            <Image 
+                                src={product.imageUrl} 
+                                alt={product.name} 
+                                className='w-full h-48 object-cover' 
+                                width={300} 
+                                height={300} 
+                            />
+                            <div className='p-4'>
+                                <h2 className='text-lg font-bold text-black uppercase'>{product.name}</h2>
+                                <p className='mt-2 text-gray-700 text-sm'>{product.description.slice(0, 40)}...</p>
+                                <p className='mt-2 text-black font-semibold'>${product.price}</p>
+                            </div>
+                            <div className='flex justify-between items-center p-4 bg-gray-100'>
+                                <button className='w-full bg-red-600 text-white text-xs font-bold uppercase rounded py-2 hover:bg-red-500 transition duration-200 focus:outline-none'>
+                                    Add to cart
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </main>
         </div>
-      ))
-    }
-  </div>
-</div>
-      </>
-    )
-  }
+    );
+}
