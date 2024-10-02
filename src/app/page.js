@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import CarouselParent from "./Components/CarouselParent";
 import Header from "./Components/Header";
 import axios from "axios";
+import Products from "./Product";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     <main>
     <Header/> 
     <CarouselParent/>
+    <Products/>
     </main>
   );
 }
