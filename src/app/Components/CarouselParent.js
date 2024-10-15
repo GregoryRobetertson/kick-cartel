@@ -9,7 +9,6 @@ const images = [
   ];
 
    export default function CarouselParent(){
-
   return (
     <div className="p-4 pt-px">
       <Carousel

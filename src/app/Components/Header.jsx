@@ -45,18 +45,13 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="#shop" className="text-white underline-offset-4 hover:no-underline">
+                <Link href="/shop" className="text-white underline-offset-4 hover:no-underline">
                   Shop
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="text-white underline-offset-4 hover:no-underline">
                   About
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-white underline-offset-4 hover:no-underline">
-                  Contact
                 </Link>
               </li>
             </ul>

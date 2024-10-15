@@ -1,8 +1,10 @@
+'use client';
+
 import axios from "axios";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
-import { CartContext } from "./Cart";
-import Cart from "./ShoppingCart";
+import { CartContext } from "../Cart";
+import Cart from "../ShoppingCart";
 
 export default function Products() {
     const [products, setProducts] = useState([]);

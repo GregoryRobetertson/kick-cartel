@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 const Carousel = ({ images, interval = 3000, ctaText, onCtaClick }) => {
@@ -23,12 +24,16 @@ const Carousel = ({ images, interval = 3000, ctaText, onCtaClick }) => {
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-50">
         <h2 className="text-4xl font-bold mb-4">Welcome to Our Site!</h2>
         {ctaText && (
-          <button
+
+          <Link href="/shop">
+            <button
             onClick={onCtaClick}
             className="px-6 py-3 bg-red-700 text-white font-semibold rounded-lg shadow-lg  hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
           >
             {ctaText}
           </button>
+          </Link>
+        
         )}
       </div>
     </div>
