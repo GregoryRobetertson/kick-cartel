@@ -1,4 +1,6 @@
+
 import React from "react";
+import { Image } from "react-bootstrap";
 
 export default function About() {
   return (
@@ -11,7 +13,13 @@ export default function About() {
       </div>
 
       <div className="flex flex-col items-center justify-center w-full md:w-3/4 lg:w-1/2 mb-10">
-        <img src="images/kick-kartel-store.jpeg" alt="Kick Cartel image" className="rounded-lg shadow-lg w-full mb-4" />
+        <img
+          src="/images/kick-kartel-store.jpeg" 
+          alt="Kick Cartel image" 
+          className="rounded-lg shadow-lg w-full mb-4" 
+          width={800} // Set your desired width
+          height={600} // Set your desired height
+        />
         <div className="bg-white text-black p-8 rounded-lg shadow-lg">
           <h2 className="font-bold text-3xl">Why Choose Kick Cartel?</h2>
           <ul className="list-disc space-y-2 mt-2">

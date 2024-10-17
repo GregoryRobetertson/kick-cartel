@@ -1,7 +1,8 @@
 'use client'
-import Image from 'next/image';
+
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
+import { Image } from 'react-bootstrap';
 
 const Carousel = ({ images, interval = 3000, ctaText, onCtaClick }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +17,9 @@ const Carousel = ({ images, interval = 3000, ctaText, onCtaClick }) => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      <img
+      
+<img
+
         src={images[currentIndex]}
         alt="carousel"
         className="w-full h-full object-cover"
