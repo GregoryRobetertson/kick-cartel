@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB5bXtfjmOSWPupW0BgChzR2i1nmBSLxK4",
-  authDomain: "kick-cartel-28bf3.firebaseapp.com",
-  projectId: "kick-cartel-28bf3",
-  storageBucket: "kick-cartel-28bf3.appspot.com",
-  messagingSenderId: "304402302894",
-  appId: "1:304402302894:web:2bad14b8ab5f274f8a2a3f"
+  apiKey: "AIzaSyD9LjpLUDBVAFm9FqC8ow5sjDzvNJCVIT0",
+  authDomain: "kick-cartel-73dc0.firebaseapp.com",
+  projectId: "kick-cartel-73dc0",
+  storageBucket: "kick-cartel-73dc0.firebasestorage.app",
+  messagingSenderId: "140453864875",
+  appId: "1:140453864875:web:4a0462148043441a631eee",
 };
 
 // Initialize Firebase
